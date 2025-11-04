@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageTags>ARC;F#;FSharp;dotnet;.Net;bioinformatics;biology;fable-library;datascience;dataplant;nfdi;metadata;fable-dotnet</PackageTags>
+  </PropertyGroup>
+  <Import Project="../Package.Metadata.props" />
+  
+  <Import Project="ROCratePCC.Common.props" />
+  
+  <ItemGroup>
+    <EmbeddedResource Remove="ContractIO\**" />
+    <EmbeddedResource Remove="JsonIO\**" />
+    <EmbeddedResource Remove="WebRequest\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="index.ts" />
+    <None Include="rocrate.py" />
+    <None Include="__init__.py" />
+    <None Include="README.md" />
+    <Content Include="ROCratePCC.Common.props" Pack="true" PackagePath="fable/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Main.fs" /> 
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ARCtrl" />
+  </ItemGroup>
+ 
+  
+</Project>

@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{326188FB-2CC0-4610-A082-708885BF47AA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		.zenodo.json = .zenodo.json
+		.github\workflows\build-test.yml = .github\workflows\build-test.yml
+		build.cmd = build.cmd
+		build.sh = build.sh
+		Directory.Packages.props = Directory.Packages.props
+		.config\dotnet-tools.json = .config\dotnet-tools.json
+		global.json = global.json
+		LICENSE = LICENSE
+		package.json = package.json
+		pyproject.toml = pyproject.toml
+		README.md = README.md
+		RELEASE_NOTES.md = RELEASE_NOTES.md
+		setup.cmd = setup.cmd
+		tsconfig.json = tsconfig.json
+		vite.config.mts = vite.config.mts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6DA2330B-D407-4FB1-AF05-B0184034EC44}"
+	ProjectSection(SolutionItems) = preProject
+		src\Package.Metadata.props = src\Package.Metadata.props
+		src\ROCratePCC\ROCratePCC.Javascript.fsproj = src\ROCratePCC\ROCratePCC.Javascript.fsproj
+		src\ROCratePCC\ROCratePCC.Python.fsproj = src\ROCratePCC\ROCratePCC.Python.fsproj
+	EndProjectSection
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Build", "build\Build.fsproj", "{5EAFB0CD-1168-4FCA-AA61-E96AD6C85819}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		package.json = package.json
+		tsconfig.json = tsconfig.json
+		vite.config.mts = vite.config.mts
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ROCratePCC", "src\ROCratePCC\ROCratePCC.fsproj", "{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EAFB0CD-1168-4FCA-AA61-E96AD6C85819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAFB0CD-1168-4FCA-AA61-E96AD6C85819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAFB0CD-1168-4FCA-AA61-E96AD6C85819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAFB0CD-1168-4FCA-AA61-E96AD6C85819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {326188FB-2CC0-4610-A082-708885BF47AA}
+		{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E} = {6DA2330B-D407-4FB1-AF05-B0184034EC44}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E354DE6-99BA-421E-9EF8-E808B855A85F}
+	EndGlobalSection
+EndGlobal

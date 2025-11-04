@@ -1,0 +1,53 @@
+{
+  "type": "module",
+  "name": "@nfdi4plants/ROCratePCC",
+  "version": "3.0.0-beta.11",
+  "description": "Top level ARC DataModel and API function descriptions.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfdi4plants/ROCratePCC.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nfdi4plants/ROCratePCC/issues"
+  },
+  "homepage": "https://github.com/nfdi4plants/ROCratePCC#readme",
+  "author": "Heinrich Lukas Weil <weil@rptu.de> (https://github.com/HLWeil)",
+  "contributors": [
+    "Kevin Frey <Freymaurer@gmx.de> (https://github.com/Freymaurer)"
+  ],
+  "main": "./dist/ts/index.js",
+  "module": "./dist/ts/index.js",
+  "types": "./dist/ts/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/ts/index.d.ts",
+      "import": "./dist/ts/index.js",
+      "require": "./dist/ts/index.js"
+    },
+    "./*": {
+      "types": "./dist/ts/ts/*.d.ts",
+      "import": "./dist/ts/ts/*.js",
+      "require": "./dist/ts/ts/*.js"
+    }
+  },
+  "private": false,
+  "files": [
+    "dist/ts"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@fable-org/fable-library-js": "^1.8.0",
+    "@nfdi4plants/exceljs": "^0.3.0",
+    "isomorphic-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "jsonschema": "^1.4.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.1.1"
+  }
+}
