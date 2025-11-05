@@ -5,23 +5,7 @@ open Helpers
 
 let project = "ROCratePCC"
 
-let allTestsProject = "tests/All"
-
-/// Dotnet and JS test paths
-let testProjects = 
-    [
-        "tests/All"
-        "tests/ROCratePCC"
-        "tests/Contract"
-        "tests/Core"
-        "tests/CWL"
-        "tests/FileSystem"
-        "tests/Json"
-        "tests/ROCrate"
-        "tests/Spreadsheet"
-        "tests/ValidationPackages"
-        "tests/Yaml"
-    ]
+let allTestsProject = "tests/ROCratePCC"
 
 /// Native JS test paths
 let jsTestProjects =
