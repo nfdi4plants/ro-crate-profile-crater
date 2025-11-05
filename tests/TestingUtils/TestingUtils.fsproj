@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="TestingUtils.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fable.Pyxpecto" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Condition="'$(FABLE_COMPILER)' != 'true'" Include="..\..\src\ROCratePCC\ROCratePCC.fsproj" />
+    <ProjectReference Condition="'$(FABLE_COMPILER_JAVASCRIPT)' == 'true'" Include="..\..\src\ROCratePCC\ROCratePCC.Javascript.fsproj" />
+    <ProjectReference Condition="'$(FABLE_COMPILER_TYPESCRIPT)' == 'true'" Include="..\..\src\ROCratePCC\ROCratePCC.Javascript.fsproj" />
+    <ProjectReference Condition="'$(FABLE_COMPILER_PYTHON)' == 'true'" Include="..\..\src\ROCratePCC\ROCratePCC.Python.fsproj" />
+  </ItemGroup>
+</Project>

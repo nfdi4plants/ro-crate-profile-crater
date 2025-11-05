@@ -22,6 +22,7 @@ export default defineConfig({
             external: [
                 'fable-org/fable-library-js',
                 '@nfdi4plants/exceljs',
+                '@nfdi4plants/arctrl',
                 'isomorphic-fetch',
                 'fs',
                 'path',

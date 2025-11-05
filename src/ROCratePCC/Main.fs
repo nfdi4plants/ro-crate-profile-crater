@@ -1,4 +1,4 @@
-module ROCratePCC
+namespace ROCratePCC
 
 
 open ARCtrl.ROCrate
@@ -72,21 +72,20 @@ type ResourceDescriptor(textualResources : ResizeArray<TextualResource>, resourc
         n.SetProperty("http://www.w3.org/ns/dx/prof/hasArtifact", textualResources)
 
 [<AttachMembers>]
-type Specification(textualResources : ResizeArray<TextualResource>) as n =
+type Specification(textualResources : ResizeArray<TextualResource>) =
     inherit ResourceDescriptor(textualResources = textualResources, resourceDescriptorType = ResourceDescriptorType.Specification)
 
 [<AttachMembers>]
-type Constraint(textualResources : ResizeArray<TextualResource>) as n =
+type Constraint(textualResources : ResizeArray<TextualResource>) =
     inherit ResourceDescriptor(textualResources = textualResources, resourceDescriptorType = ResourceDescriptorType.Constraint)
 
 [<AttachMembers>]
-type Guidance(textualResources : ResizeArray<TextualResource>) as n =
+type Guidance(textualResources : ResizeArray<TextualResource>) =
     inherit ResourceDescriptor(textualResources = textualResources, resourceDescriptorType = ResourceDescriptorType.Guidance)
 
 [<AttachMembers>]
-type Example(textualResources : ResizeArray<TextualResource>) as n =
+type Example(textualResources : ResizeArray<TextualResource>) =
     inherit ResourceDescriptor(textualResources = textualResources, resourceDescriptorType = ResourceDescriptorType.Example)
-
 
 [<AttachMembers>]
 type RootDataEntity(id : string, name : string, description : string, license: License, usedTypes : ResizeArray<UsedType>, resourceDescriptors : ResizeArray<ResourceDescriptor>, authors : ResizeArray<Author>) as n =
@@ -124,61 +123,4 @@ type Profile(rootDataEntity : RootDataEntity, ?license : License, ?roCrateSpec :
 
 
 
-//open ROCratePCC
-
-
-let types : ResizeArray<UsedType> = ResizeArray [
-    UsedType(iri = "https://schema.org/CreativeWork", name = "CreativeWork");
-    UsedType(iri = "http://www.w3.org/ns/dx/prof/Profile", name = "Profile");
-]
-
-let authors : ResizeArray<Author> = ResizeArray [
-    Author(orcid = "0000-0002-5526-71389", name = "Florian Wetzels");
-    Author(orcid = "0000-0003-1945-6342", name = "Heinrich Lukas Weil");
-]
-
-let version = "1.0.0-draft.2"
-
-let id = $"https://github.com/nfdi4plants/isa-ro-crate-profile/tree/{version}/profile"
-
-let name = "ISA RO-Crate Profile"
-
-let description = "An RO-Crate profile for representing ISA data in Research Object Crates (RO-Crates). This profile defines how to represent ISA Investigation, Study, and Assay data using RO-Crate metadata."
-
-let license = License(iri = "https://mit-license.org/", name = "MIT License")
-
-let specifications = ResizeArray[
-    TextualResource(
-        name = "ISA RO-Crate Profile description",
-        filePath = "isa_ro_crate.md",
-        encodingFormat = "text/markdown",
-        rootDataEntityId = id
-    )
-]
-
-
-let resourceDescriptors = ResizeArray [
-    Specification(specifications) :> ResourceDescriptor
-]
-
-let rootEntity = 
-    RootDataEntity(
-        id = id,
-        name = name,
-        description = description,
-        license = license,
-        usedTypes = types,
-        resourceDescriptors = resourceDescriptors,
-        authors = ResizeArray authors
-    )
-
-let profile = 
-    Profile(
-        rootEntity,
-        license = license
-    )
-
-let string = profile.ToROCrateJsonString(spaces = 2)
-
-System.IO.File.WriteAllText("profile/ro-crate-metadata.json", string)
 

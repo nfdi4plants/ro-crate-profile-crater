@@ -13,9 +13,9 @@
   },
   "homepage": "https://github.com/nfdi4plants/ROCratePCC#readme",
   "author": "Heinrich Lukas Weil <weil@rptu.de> (https://github.com/HLWeil)",
-  "contributors": [
-    "Kevin Frey <Freymaurer@gmx.de> (https://github.com/Freymaurer)"
-  ],
+    "contributors": [
+        "Eli Chadwick <eli.chadwick@manchester.ac.uk> (https://github.com/elichad)"
+    ],
   "main": "./dist/ts/index.js",
   "module": "./dist/ts/index.js",
   "types": "./dist/ts/index.d.ts",
@@ -38,11 +38,10 @@
   "scripts": {
     "build": "vite build"
   },
-  "dependencies": {
-    "@fable-org/fable-library-js": "^1.8.0",
-    "@nfdi4plants/exceljs": "^0.3.0",
-    "isomorphic-fetch": "^3.0.0"
-  },
+    "dependencies": {
+        "@fable-org/fable-library-js": "^1.8.0",
+        "@nfdi4plants/arctrl": "^3.0.0-beta.11"
+    },
   "devDependencies": {
     "jsonschema": "^1.4.1",
     "typescript": "~5.8.3",

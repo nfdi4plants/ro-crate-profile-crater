@@ -6,18 +6,11 @@
   <Import Project="../Package.Metadata.props" />
   
   <Import Project="ROCratePCC.Common.props" />
-  
-  <ItemGroup>
-    <EmbeddedResource Remove="ContractIO\**" />
-    <EmbeddedResource Remove="JsonIO\**" />
-    <EmbeddedResource Remove="WebRequest\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="index.ts" />
     <None Include="rocrate.py" />
     <None Include="__init__.py" />
-    <None Include="README.md" />
     <Content Include="ROCratePCC.Common.props" Pack="true" PackagePath="fable/" />
   </ItemGroup>
 

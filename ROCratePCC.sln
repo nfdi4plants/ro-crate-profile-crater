@@ -18,7 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		package.json = package.json
 		pyproject.toml = pyproject.toml
 		README.md = README.md
-		RELEASE_NOTES.md = RELEASE_NOTES.md
 		setup.cmd = setup.cmd
 		tsconfig.json = tsconfig.json
 		vite.config.mts = vite.config.mts
@@ -42,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{02EA681E-C7D8-
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ROCratePCC", "src\ROCratePCC\ROCratePCC.fsproj", "{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestingUtils", "tests\TestingUtils\TestingUtils.fsproj", "{D42EE01F-9BD6-596B-F71D-BDA0061D8E29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +57,10 @@ Global
 		{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADE065AA-896B-8ED1-95C0-77E4AE7EEE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42EE01F-9BD6-596B-F71D-BDA0061D8E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42EE01F-9BD6-596B-F71D-BDA0061D8E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42EE01F-9BD6-596B-F71D-BDA0061D8E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42EE01F-9BD6-596B-F71D-BDA0061D8E29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
