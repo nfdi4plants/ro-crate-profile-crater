@@ -30,7 +30,7 @@ include = [
     "src/ROCratePCC/py/**/*.py"
 ]
 packages = [
-    { include = "**/*.py", from = "src/ROCratePCC/", to = "ROCratePCC" }
+    { include = "**/*.py", from = "src/ROCratePCC/", to = "rocratepcc" }
 ]
 
 [build-system]
